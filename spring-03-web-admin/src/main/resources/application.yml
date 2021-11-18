@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test1
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      aop-patterns: com.shf.*
+      filters: stat,wall
+
+      stat-view-servlet:
+        enable: true
+        login-username: admin
+        login-password: admin
+        resetEnable: false
+
+      web-stat-filter:
+        enable: true
+        urlPattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,.*css,*.ico,/druid/*'
+
+      filter:
+        stat:
+          slow-sql-millis: 1000
+          logSlowSql: true
+          enable: true
+        wall:
+          enable: true
+          config:
+            drop-table-allow: false
+
+#配置mybatis规则
+mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configurations:
+    map-underscore-to-camel-case: true

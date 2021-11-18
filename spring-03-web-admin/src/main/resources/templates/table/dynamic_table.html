@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>Dynamic Table</title>
+
+  <!--dynamic table-->
+  <link href="js/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+  <link href="js/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+  <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
+
+    <div th:include="common::commonheader"></div>
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <div th:replace="common::#leftmenu"></div>
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <div th:replace="common::headermenu"></div>
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <h3>
+                Dynamic Table
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Data Tables</a>
+                </li>
+                <li class="active"> Dynamic Table </li>
+            </ul>
+        </div>
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Dynamic Table
+                            <span class="tools pull-right">
+                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                <a href="javascript:;" class="fa fa-times"></a>
+             </span>
+                        </header>
+                        <div class="panel-body">
+                            <div class="adv-table">
+                                <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="row-fluid"><div class="span6"><div id="dynamic-table_length" class="dataTables_length"><label><select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> records per page</label></div></div><div class="span6"><div class="dataTables_filter" id="dynamic-table_filter"><label>Search: <input type="text" class="form-control" aria-controls="dynamic-table"></label></div></div></div><table class="display table table-bordered table-striped dataTable" id="dynamic-table" aria-describedby="dynamic-table_info">
+                                    <thead>
+                                    <tr role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending" style="width: 181px;">Rendering engine</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 266px;">Browser</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 250px;">Platform(s)</th><th class="hidden-phone sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 151px;">Engine version</th><th class="hidden-phone sorting_desc" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-sort="descending" aria-label="CSS grade: activate to sort column ascending" style="width: 107px;">CSS grade</th></tr>
+                                    </thead>
+
+                                    <tfoot>
+                                    <tr><th rowspan="1" colspan="1">Rendering engine</th><th rowspan="1" colspan="1">Browser</th><th rowspan="1" colspan="1">Platform(s)</th><th class="hidden-phone" rowspan="1" colspan="1">Engine version</th><th class="hidden-phone" rowspan="1" colspan="1">CSS grade</th></tr>
+                                    </tfoot>
+                                    <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="gradeX odd">
+                                        <td class=" ">Trident</td>
+                                        <td class=" ">Internet
+                                            Explorer 4.0</td>
+                                        <td class=" ">Win 95+</td>
+                                        <td class="center hidden-phone ">4</td>
+                                        <td class="center hidden-phone  sorting_1">X</td>
+                                    </tr><tr class="gradeX even">
+                                        <td class=" ">Tasman</td>
+                                        <td class=" ">Internet Explorer 4.5</td>
+                                        <td class=" ">Mac OS 8-9</td>
+                                        <td class="center hidden-phone ">-</td>
+                                        <td class="center hidden-phone  sorting_1">X</td>
+                                    </tr><tr class="gradeX odd">
+                                        <td class=" ">Misc</td>
+                                        <td class=" ">Dillo 0.8</td>
+                                        <td class=" ">Embedded devices</td>
+                                        <td class="center hidden-phone ">-</td>
+                                        <td class="center hidden-phone  sorting_1">X</td>
+                                    </tr><tr class="gradeX even">
+                                        <td class=" ">Misc</td>
+                                        <td class=" ">Links</td>
+                                        <td class=" ">Text only</td>
+                                        <td class="center hidden-phone ">-</td>
+                                        <td class="center hidden-phone  sorting_1">X</td>
+                                    </tr><tr class="gradeX odd">
+                                        <td class=" ">Misc</td>
+                                        <td class=" ">Lynx</td>
+                                        <td class=" ">Text only</td>
+                                        <td class="center hidden-phone ">-</td>
+                                        <td class="center hidden-phone  sorting_1">X</td>
+                                    </tr><tr class="gradeU even">
+                                        <td class=" ">Other browsers</td>
+                                        <td class=" ">All others</td>
+                                        <td class=" ">-</td>
+                                        <td class="center hidden-phone ">-</td>
+                                        <td class="center hidden-phone  sorting_1">U</td>
+                                    </tr><tr class="gradeA odd">
+                                        <td class=" ">Presto</td>
+                                        <td class=" ">Nintendo DS browser</td>
+                                        <td class=" ">Nintendo DS</td>
+                                        <td class="center hidden-phone ">8.5</td>
+                                        <td class="center hidden-phone  sorting_1">C/A<sup>1</sup></td>
+                                    </tr><tr class="gradeC even">
+                                        <td class=" ">Trident</td>
+                                        <td class=" ">Internet
+                                            Explorer 5.0</td>
+                                        <td class=" ">Win 95+</td>
+                                        <td class="center hidden-phone ">5</td>
+                                        <td class="center hidden-phone  sorting_1">C</td>
+                                    </tr><tr class="gradeC odd">
+                                        <td class=" ">KHTML</td>
+                                        <td class=" ">Konqureror 3.1</td>
+                                        <td class=" ">KDE 3.1</td>
+                                        <td class="center hidden-phone ">3.1</td>
+                                        <td class="center hidden-phone  sorting_1">C</td>
+                                    </tr><tr class="gradeC even">
+                                        <td class=" ">Tasman</td>
+                                        <td class=" ">Internet Explorer 5.1</td>
+                                        <td class=" ">Mac OS 7.6-9</td>
+                                        <td class="center hidden-phone ">1</td>
+                                        <td class="center hidden-phone  sorting_1">C</td>
+                                    </tr></tbody></table><div class="row-fluid"><div class="span6"><div class="dataTables_info" id="dynamic-table_info">Showing 1 to 10 of 57 entries</div></div><div class="span6"><div class="dataTables_paginate paging_bootstrap pagination"><ul><li class="prev disabled"><a href="#">← Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">Next → </a></li></ul></div></div></div></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        <div class="row">
+        <div class="col-sm-12">
+        <section class="panel">
+        <header class="panel-heading">
+            Dynamic Table
+            <span class="tools pull-right">
+                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                <a href="javascript:;" class="fa fa-times"></a>
+             </span>
+        </header>
+        <div class="panel-body">
+        <div class="adv-table">
+        <table  class="display table table-bordered table-striped" id="dynamic">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>用户名</th>
+            <th>密码</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="gradeX" th:each="user,status:${users}">
+            <td th:text="${status.count}">Trident</td>
+            <td th:text="${user.userName}">Internet Explorer 4.0</td>
+            <td th:text="${user.password}">Internet Explorer 4.0</td>
+        </tr>
+
+        </tbody>
+        </table>
+
+        </div>
+        </div>
+        </section>
+        </div>
+        </div>
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer>
+            2020 &copy; AdminEx by ThemeBucket </a>
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+<!--dynamic table-->
+<script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+<!--dynamic table initialization -->
+<script src="js/dynamic_table_init.js"></script>
+
+<div th:replace="common::#commonScript"></div>
+
+
+</body>
+</html>
